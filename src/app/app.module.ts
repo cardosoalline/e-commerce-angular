@@ -13,9 +13,20 @@ import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './viewa/home/home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CardProductComponent } from './components/template/card-product/card-product.component';
+import { ListProductsComponent } from './viewa/list-products/list-products.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    NavComponent,
+    HomeComponent,
+    CardProductComponent,
+    ListProductsComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -24,6 +35,7 @@ import { HomeComponent } from './viewa/home/home.component';
     MatSidenavModule,
     MatListModule,
     MatCardModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
