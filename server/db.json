@@ -1,0 +1,74 @@
+{
+    "products": [
+      {
+        "name": "Bolsa Unicórnio",
+        "category": "presentes",
+        "img": "/img/bolsaunicornio.jpg",
+        "price": 50,
+        "id": 1
+      },
+      {
+        "name": "Peso de porta Avengers",
+        "category": "lembrancinha",
+        "img": "/img/averngers.jpg",
+        "price": 80,
+        "id": 2
+      },
+      {
+        "name": "Quadro decorativo Home Sweet Home",
+        "category": "presentes",
+        "img": "/img/homeswet.jpg",
+        "price": 90,
+        "id": 3
+      },
+      {
+        "name": "Ponteira de lápis Avengers",
+        "category": "lembracinhas",
+        "img": "/img/lapisavengers.jpg",
+        "price": 10,
+        "id": 4
+      },
+      {
+        "name": "Ponteira de lápis Turma da Mônica - Sansão",
+        "category": "lembrancinhas",
+        "img": "/img/ponteirasansao.jpg",
+        "price": 10,
+        "id": 5
+      },
+      {
+        "name": "Porta de maternidade Coração",
+        "category": "maternidade",
+        "img": "/img/portacoracao.jpg",
+        "price": 150,
+        "id": 6
+      },
+      {
+        "name": "Almofada de Aliança",
+        "category": "casamento",
+        "img": "/img/portalianca.jpg",
+        "price": 160,
+        "id": 7
+      },
+      {
+        "name": "Porta de maternindade Ursinha",
+        "category": "maternidade",
+        "img": "/img/portajulia.jpg",
+        "price": 190,
+        "id": 8
+      },
+      {
+        "name": "Porta de maternidade Ovelinhas",
+        "category": "maternidade",
+        "img": "/img/portamalu.jpg",
+        "price": 180,
+        "id": 9
+      },
+      {
+        "name": "Porta de maternidade Marinheiro",
+        "category": "maternidade",
+        "img": "/img/portamarinheiro.jpg",
+        "price": 180,
+        "id": 10
+      }
+    ]
+  }
