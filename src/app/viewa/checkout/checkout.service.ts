@@ -35,7 +35,9 @@ export class CheckoutService {
     //setTimeout para que o node faça a verificação e já adicione o preço na primeira requisição
     setTimeout(() => {
       this.totalPrice += this.getPrice();
+      this.listSelectProducts.push(this.getProduct()); //ao selecionar o card, ele pega o list e joga dentro do array o retorno do getproduct
     }, 1);
+    console.log(this.listSelectProducts);
   }
 
   //retirada dos produto do carrinho
@@ -44,6 +46,17 @@ export class CheckoutService {
     if (this.totalPrice < 0) {
       this.totalPrice = 0;
     }
+    let index = this.listSelectProducts.indexOf(this.getProduct()); //para percorrer o array
+
+    //se true ele vai garantir que o produto selecionado é o q será retirado do array
+    if (
+      index > -1 ||
+      index === this.listSelectProducts.indexOf(this.getProduct())
+    ) {
+      this.listSelectProducts.splice(index, 1);
+      //splice() altera o conteúdo de uma lista, adicionando novos elementos enquanto remove elementos antigos
+    }
+    console.log(this.listSelectProducts);
   }
   constructor(private httpClient: HttpClient) {}
 
