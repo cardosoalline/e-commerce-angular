@@ -52,6 +52,7 @@ import { CheckoutComponent } from './viewa/checkout/checkout.component';
     MatFormFieldModule,
     MatInputModule,
     MatButtonToggleModule,
+    MatBadgeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
