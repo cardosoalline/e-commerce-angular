@@ -15,7 +15,10 @@ export class CardProductComponent implements OnInit {
   ngOnInit(): void {
     this.checkoutService.getListProducts().subscribe((products) => {
       this.listProducts = products;
-      console.log(this.listProducts);
     });
+  }
+
+  selectProduct(product: Products) {
+    this.checkoutService.setPrice(product.price);
   }
 }
