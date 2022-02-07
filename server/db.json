@@ -2,71 +2,81 @@
     "products": [
       {
         "name": "Bolsa Unicórnio",
-        "category": "presentes",
-        "img": "/img/bolsaunicornio.jpg",
+        "category": "Presentes",
+        "img": "assets/img/bolsaunicornio.jpg",
+        "descricao": "Bolsa de palha com decoração de unicórnio 3D, em feltro.",
         "price": 50,
         "id": 1
       },
       {
         "name": "Peso de porta Avengers",
-        "category": "lembrancinha",
-        "img": "/img/averngers.jpg",
+        "category": "Lembrancinha",
+        "img": "assets/img/avengers.jpg",
+        "descricao": "Peso de porta dos personagens do filme Avangers, em feltro.",
         "price": 80,
         "id": 2
       },
       {
-        "name": "Quadro decorativo Home Sweet Home",
-        "category": "presentes",
-        "img": "/img/homeswet.jpg",
+        "name": "Quadro Home Sweet Home",
+        "category": "Presentes",
+        "img": "assets/img/homeswet.jpg",
+        "descricao": "Quadro decorativo feito em bastidor de madeira, tecido e feltro.",
         "price": 90,
         "id": 3
       },
       {
         "name": "Ponteira de lápis Avengers",
-        "category": "lembracinhas",
-        "img": "/img/lapisavengers.jpg",
+        "category": "Lembracinhas",
+        "img": "assets/img/lapisavengers.jpg",
+        "descricao": "Ponteira de lápis dos personagens do filme Avangers em 3D feito em feltro.",
         "price": 10,
         "id": 4
       },
       {
-        "name": "Ponteira de lápis Turma da Mônica - Sansão",
-        "category": "lembrancinhas",
-        "img": "/img/ponteirasansao.jpg",
+        "name": "Ponteira de lápis Sansão",
+        "category": "Lembrancinhas",
+        "img": "assets/img/ponteirasansao.jpg",
+        "descricao": "Ponteira de lápis do personagen Sansão da Turma da Mônica em 3D feito em feltro.",
         "price": 10,
         "id": 5
       },
       {
         "name": "Porta de maternidade Coração",
-        "category": "maternidade",
-        "img": "/img/portacoracao.jpg",
+        "category": "Maternidade",
+        "img": "assets/img/portacoracao.jpg",
+        "descricao": "Porta de maternidade coração. Feita em material mdf, tintura spray, tecido e feltro.",
         "price": 150,
         "id": 6
       },
       {
         "name": "Almofada de Aliança",
-        "category": "casamento",
-        "img": "/img/portalianca.jpg",
+        "category": "Casamento",
+        "img": "assets/img/portalianca.jpg",
+        "descricao": "Almofadinha de aliança feita em linho e bordado a mão.",
         "price": 160,
         "id": 7
       },
       {
         "name": "Porta de maternindade Ursinha",
-        "category": "maternidade",
-        "img": "/img/portajulia.jpg",
+        "category": "Maternidade",
+        "img": "assets/img/portaljulia.jpg",
+        "descricao": "Porta de maternidade Ursinha. Feita em bastidor de madeira, tecido e feltro.",
         "price": 190,
         "id": 8
       },
       {
         "name": "Porta de maternidade Ovelinhas",
-        "category": "maternidade",
-        "img": "/img/portamalu.jpg",
+        "category": "Maternidade",
+        "img": "assets/img/portamalu.jpg",
+        "descricao": "Porta de maternidade Ovelinhas. Feita em material mdf, tecido e feltro.",
         "price": 180,
         "id": 9
       },
       {
         "name": "Porta de maternidade Marinheiro",
-        "category": "maternidade",
-        "img": "/img/portamarinheiro.jpg",
+        "category": "Maternidade",
+        "img": "assets/img/portamarinheiro.jpg",
+        "descricao": "Porta de maternidade Marinheiro. Feita em bastidor de madeira, tecido e feltro.",
         "price": 180,
         "id": 10
       }
