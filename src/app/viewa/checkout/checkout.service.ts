@@ -1,3 +1,4 @@
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -58,9 +59,16 @@ export class CheckoutService {
     }
     console.log(this.listSelectProducts);
   }
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient, private snackBar: MatSnackBar) {}
 
-  //função para
+  showMessage(msg: string, isError: boolean = false): void {
+    this.snackBar.open(msg, 'close', {
+      duration: 3000,
+      horizontalPosition: 'right',
+      verticalPosition: 'top',
+      panelClass: isError ? ['success'] : ['error'],
+    });
+  }
 
   getListProducts(): Observable<Products[]> {
     return this.httpClient.get<Products[]>(this.baseUrl + '/products');
