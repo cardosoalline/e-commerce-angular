@@ -1,1 +1,18 @@
-<p>select-button works!</p>
+<button
+  mat-flat-button
+  color="primary"
+  class="selected"
+  [disabled]="disabled === true"
+  (click)="selectProduct()"
+>
+  <i class="material-icons"> add_shopping_cart </i>
+</button>
+
+<button
+  mat-flat-button
+  color="warn"
+  [disabled]="disabled === false"
+  (click)="unselectProduct()"
+>
+  <i class="material-icons"> remove_shopping_cart </i>
+</button>
