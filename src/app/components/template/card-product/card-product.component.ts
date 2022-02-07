@@ -19,6 +19,7 @@ export class CardProductComponent implements OnInit {
   }
 
   selectProduct(product: Products) {
+    this.checkoutService.setProduct(product); //passando o objeto por completo para o array
     this.checkoutService.setPrice(product.price);
   }
 }
