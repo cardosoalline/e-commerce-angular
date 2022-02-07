@@ -17,6 +17,10 @@ export class CheckoutService {
   //variável privada inicia com _ por convençao
   private _priceHandler: number = 0;
 
+  public listSelectProducts: Products[] = [];
+
+  private _productHandler!: Products;
+
   //metodos acessores do pricehandler
   getPrice(): number {
     return this._priceHandler;
@@ -28,7 +32,10 @@ export class CheckoutService {
 
   //calculo do valor de produtos escolhidos
   selectProduct() {
-    this.totalPrice += this.getPrice();
+    //setTimeout para que o node faça a verificação e já adicione o preço na primeira requisição
+    setTimeout(() => {
+      this.totalPrice += this.getPrice();
+    }, 1);
   }
 
   //retirada dos produto do carrinho
@@ -44,5 +51,15 @@ export class CheckoutService {
 
   getListProducts(): Observable<Products[]> {
     return this.httpClient.get<Products[]>(this.baseUrl + '/products');
+  }
+
+  //get e set da variável _productHandler
+
+  getProduct() {
+    return this._productHandler;
+  }
+
+  setProduct(value: Products) {
+    this._productHandler = value;
   }
 }
