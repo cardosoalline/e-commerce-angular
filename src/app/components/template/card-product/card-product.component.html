@@ -13,7 +13,7 @@
       <img src="{{ product.img }}" alt="capa" />
       <p class="card-description">{{ product.descricao }}</p>
       <p class="card-description">{{ product.price }}</p>
-      <app-select-button></app-select-button>
+      <app-select-button (click)="selectProduct(product)"></app-select-button>
     </mat-card-content>
   </mat-card>
 </mat-card-content>
