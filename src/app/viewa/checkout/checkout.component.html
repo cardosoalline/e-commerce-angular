@@ -1,11 +1,21 @@
 <mat-card class="mat-card-main mat-evevatioz-z4">
   <mat-card-title>
-    <h2>Checkout</h2>
+    <h2>Carrinho</h2>
   </mat-card-title>
 
   <mat-card>
+    <button
+      mat-flat-button
+      *ngIf="listSelectedProducts.length == 0"
+      id="empty-cart"
+      routerLink="/list-products"
+    >
+      <i class="material-icons"> production_quantity_limits</i>
+      <p class="text-add">Comprar</p>
+    </button>
+
     <h2>{{ listSelectedProducts.length }} Produtos Selecionados</h2>
-    <h3>Total: {{ totalPrice }}</h3>
+    <h3>Total: {{ totalPrice | currency: "BRL" }}</h3>
 
     <mat-card
       class="mat-card-product"
@@ -19,7 +29,7 @@
           </mat-card-title>
 
           <mat-card-subtitle>
-            <h2>{{ product.price }}</h2>
+            <h2>{{ product.price | currency: "BRL" }}</h2>
           </mat-card-subtitle>
         </div>
 
@@ -45,33 +55,43 @@
   <!-- form para cadastro cliente para finalizar a compra -->
   <mat-card class="mat-form">
     <form id="form">
-      <b>Preencha os campos abaixo para finalizar sua compra: </b>
+      <b>{{
+        totalPrice == 0
+          ? "Selecione pelo menos um produto para poder se cadastrar! ;)"
+          : "Preencha os campos abaixo para finalizar sua compra: "
+      }}</b>
 
       <p>
         <mat-form-field appearance="outline" class="input-form">
-          <mat-label>Nome</mat-label>
+          <mat-label>{{
+            disabled ? "Selecione ao menos um produto!" : "Nome"
+          }}</mat-label>
           <input
             matInput
             placeholder="Seu Nome"
             required
             name="name"
             [disabled]="disabled === true"
+            [(ngModel)]="client.name"
           />
           <i class="material-icons" matSuffix required>person</i>
-          <mat-hint>Ex: Maria, Jsé, etc</mat-hint>
+          <mat-hint>Ex: Maria, José, etc</mat-hint>
           <!-- mat-hint dica de digitação no input -->
         </mat-form-field>
       </p>
 
       <p>
         <mat-form-field appearance="outline" class="input-form">
-          <mat-label>Endereço de entrega:</mat-label>
+          <mat-label>{{
+            disabled ? "Selecione ao menos um produto!" : "Endereço"
+          }}</mat-label>
           <input
             matInput
             placeholder="Seu Endereço"
             required
             name="endereco"
             [disabled]="disabled === true"
+            [(ngModel)]="client.endereco"
           />
           <i class="material-icons" matSuffix required>home</i>
           <mat-hint>Ex: Rua das Couves, 11</mat-hint>
@@ -81,7 +101,9 @@
 
       <p>
         <mat-form-field appearance="outline" class="input-form">
-          <mat-label>Password: </mat-label>
+          <mat-label>{{
+            disabled ? "Selecione ao menos um produto!" : "Password"
+          }}</mat-label>
           <input
             matInput
             [type]="hide ? 'password' : 'text'"
@@ -89,19 +111,28 @@
             required
             name="password"
             [disabled]="disabled === true"
+            [(ngModel)]="client.password"
           />
-
           <button
             mat-icon
             matSuffix
             (click)="hide = !hide"
-            [disabled]="disabled === true"
+            [disabled]="
+              client.password == undefined ||
+              client.password == '' ||
+              totalPrice == 0
+                ? 'true'
+                : 'false'
+            "
           >
             <i class="material-icons" matSuffix required>{{
               hide ? "visibility_off" : "visibility"
             }}</i>
           </button>
-          <mat-hint>Ex: Maria, Jsé, etc</mat-hint>
+          <mat-hint
+            >Utilize letras maíusculas, minúsculas, números e caracteres
+            especiais.</mat-hint
+          >
           <!-- mat-hint dica de digitação no input -->
         </mat-form-field>
       </p>
@@ -109,15 +140,15 @@
       <button
         type="submit"
         mat-flat-button
-        class="mat-pay"
+        id="mat-pay"
         (click)="payment()"
         [disabled]="disabled === true"
       >
-        Pay
+        <i class="material-icons">credit_score</i>
       </button>
 
-      <button mat-flat-button class="mat-cancel" (click)="cancel()">
-        {{ disabled ? "Back" : "Cancel" }}
+      <button mat-flat-button id="mat-cancel" (click)="cancel()">
+        <i class="material-icons"> add_shopping_cart </i>
       </button>
     </form>
   </mat-card>
