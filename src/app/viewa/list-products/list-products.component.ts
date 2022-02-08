@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CheckoutService } from '../checkout/checkout.service';
 import { Products } from './products.model';
 
@@ -9,11 +10,31 @@ import { Products } from './products.model';
 })
 export class ListProductsComponent implements OnInit {
   listProducts: Products[] = [];
-  constructor(private checkoutService: CheckoutService) {}
+  listSelectedProducts!: number;
+  hidden = false;
+
+  constructor(
+    private checkoutService: CheckoutService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.checkoutService.getListProducts().subscribe((products) => {
       this.listProducts = products;
     });
+  }
+
+  toggleBadgeVisibility() {
+    this.hidden = !this.hidden;
+  }
+
+  toggleCount() {
+    return (this.listSelectedProducts =
+      this.checkoutService.listSelectProducts.length);
+  }
+
+  //se clicar no checkout vai navegar para a tela de checkout
+  toCheckout(): void {
+    this.router.navigate(['../checkout']);
   }
 }
