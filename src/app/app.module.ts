@@ -15,6 +15,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
+import { FormsModule } from '@angular/forms';
+
 import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
@@ -53,6 +55,7 @@ import { CheckoutComponent } from './viewa/checkout/checkout.component';
     MatInputModule,
     MatButtonToggleModule,
     MatBadgeModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
