@@ -1,0 +1,24 @@
+.fab-button {
+  margin-top: 0;
+  margin-right: 70px;
+  float: right;
+}
+
+.fab-button .btn-description {
+  display: none;
+  position: absolute;
+  bottom: 35%;
+  left: 80%;
+  background-color: #fff;
+  color: black;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.fab-button:hover .btn-description {
+  display: block;
+}
+
+.fab-button .mat-fab {
+  background-color: rgb(158, 194, 209);
+}
