@@ -2,7 +2,7 @@
   class="mat-card-container"
   *ngFor="let product of listProducts"
 >
-  <mat-card class="card-film">
+  <mat-card class="card-product">
     <mat-card-title
       ><h2>{{ product.name }}</h2></mat-card-title
     >
@@ -12,7 +12,7 @@
     <mat-card-content class="card-content">
       <img src="{{ product.img }}" alt="capa" />
       <p class="card-description">{{ product.descricao }}</p>
-      <p class="card-description">{{ product.price }}</p>
+      <p class="card-description">{{ product.price | currency: "BRL" }}</p>
       <app-select-button (click)="selectProduct(product)"></app-select-button>
     </mat-card-content>
   </mat-card>
