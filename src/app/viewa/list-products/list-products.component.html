@@ -1,3 +1,17 @@
+<div class="fab-button">
+  <button
+    mat-fab
+    color="primary"
+    matBadge="{{ toggleCount() }}"
+    [matBadgeHidden]="hidden"
+    (mouseover)="toggleBadgeVisibility()"
+    (mouseout)="toggleBadgeVisibility()"
+    (click)="toCheckout()"
+  >
+    <i class="material-icons">shopping_cart</i>
+    <p class="btn-description">Finalizar</p>
+  </button>
+</div>
 <mat-card>
   <mat-card-title>Lista de Produtos</mat-card-title>
 
@@ -8,5 +22,5 @@
   <mat-card-content>
     <app-card-product></app-card-product>
   </mat-card-content>
-  <button><a routerLink="/checkout">Ver Carrinho</a></button>
+  <!-- <button><a routerLink="/checkout">Ver Carrinho</a></button> -->
 </mat-card>
