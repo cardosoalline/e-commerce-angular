@@ -39,11 +39,44 @@
   margin: 10px 15px;
 }
 
-.mat-cancel {
-  background-color: red;
+#empty-cart {
+  background-color: rgb(159, 25, 177);
   color: #f2f2f2;
+  margin: 10 15px;
+}
+
+#empty-cart .text-add {
+  display: none;
+  position: absolute;
+  bottom: 35%;
+  left: 80%;
+  background-color: rgb(153, 180, 216);
+  color: black;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+#empty-cart:hover .text-add {
+  display: block;
+}
+
+#mat-pay {
+  background-color: rgb(158, 194, 209);
+  color: #f2f2f2;
+  margin: 10 15px;
+}
+
+#mat-cancel {
+  background-color: rgb(159, 25, 177);
+  color: #f2f2f2;
+  margin: 10 15px;
 }
 
 .selected {
   margin: 0 15px;
+}
+
+.add-cart {
+  background-color: rgb(173, 127, 173);
+  color: #f2f2f2;
 }
