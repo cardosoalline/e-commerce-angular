@@ -3,10 +3,12 @@
   margin-top: 15px;
 }
 
-.card-film {
+.card-product {
   width: 300px;
   height: 100%;
   margin: 0 15px 15px 0;
+
+  background-color: #f2f2f2;
 }
 
 .card-content {
